@@ -1,0 +1,27 @@
+<label> Name :- </label>
+<input type="text" placeholder="Enter Name" id="" [(ngModel)]="stdName">
+<label> Age :- </label>
+<input type="text" placeholder="Enter Age" [(ngModel)]="stdAge">
+<label> Contact :- </label>
+<input type="text" placeholder="Enter Contact" [(ngModel)]="stdContact"><br><br>
+<button type="button" style="margin-left: 20px;" (click)="addStudentInfo()">Add&hearts;</button>
+<button type="button" style="margin-left: 20px;" (click)="clearEntery()">Clear Entery&hearts;</button><hr>
+
+
+<h2>Student List</h2><hr>
+<table>
+    <tr>
+        <th>Sr.No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Contact</th>
+    </tr>
+    <tr *ngFor="let x of studentList; index as i">
+        <td>{{i + 1}}</td>
+        <td>{{x.Name}}</td>
+        <td>{{x.age}}</td>
+        <td>{{x.contact}}</td>
+        <td><button (click)="deleteEntery(i)">Delete</button></td>
+    </tr>
+</table>
+

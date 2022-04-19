@@ -1,0 +1,158 @@
+<!-- *********************Interpolation Binding********************* -->
+<h2>Interpolation Binding</h2>
+<p>My Name Is {{title}}</p><br><hr>
+
+<!-- *********************Property Binding********************* -->
+<h2>Property Binding</h2>
+<input [id]="myId" type="text" value="Ganesh"><hr>
+<input [disabled]="isDisabled" id="{{myId}}" type="text" value="Ganesh"><hr>
+
+<!-- *********************Class Binding********************* -->
+<h2>Class Binding</h2>
+<p class="color">Welcome{{title}}</p>
+
+<p [class]="title">Welcome{{title}}</p>
+
+<p class="style" [class]="title">Welcome{{title}}</p>
+
+<p [class.danger]="hasError">Welcome{{title}}</p>
+
+<p [ngClass]="messageClasses">Welcome{{title}}</p>
+
+<hr>
+
+<!-- *********************Style Binding********************* -->
+<h2>Style Binding</h2>
+
+<h4 [style.color]="'purple'">Hello {{title}}</h4>
+
+<h4 [style.color]="hasError ? 'red' : 'green'">Hello {{title}}</h4>
+
+<h4 [style.color]="highlightColor">Hello {{title}}</h4>
+
+<h4 [ngStyle]="titleStyle">Hello {{title}}</h4>
+
+<hr>
+
+<!-- *********************Event Binding********************* -->
+<h2>Event Binding</h2>
+<button (click)="onClick($event)">Click</button>
+<button (click)="string='Hello Ganesh'">Punch</button>
+
+{{string}}
+<hr>
+
+<!-- *********************Template Reference Variables********************* -->
+<h2>Template Reference Variables</h2>
+<input #myInput type="text">
+<button (click)="logMessage(myInput.value)">Log</button>
+
+<hr>
+
+<!-- *********************Two Way Binding********************* -->
+<h2>Two Way Binding</h2>
+<input [(ngModel)]="name1" type="text">
+{{name1}}
+
+<hr><hr>
+
+<!-- *********************Structural Directives********************* -->
+<h2>*ngIf Directive</h2>
+
+<h3 *ngIf="pick">Hey Hi I'm Ganesh</h3>
+<h3 *ngIf="true">Hey Hi I'm Ganesh</h3>
+
+<hr>
+<div *ngIf="pick; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+    <h3>CodeEvolution</h3>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h3>Hidden</h3>
+</ng-template>
+
+<hr>
+
+<h2>*ngSwitch Directive</h2>
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You picked Red Color</div>
+    <div *ngSwitchCase="'blue'">You picked Blue Color</div>
+    <div *ngSwitchCase="'green'">You picked Green Color</div>
+    <div *ngSwitchDefault>pick you Again</div>
+    
+</div>
+
+<hr>
+
+<h2>*ngFor Directive1</h2>
+<div *ngFor="let color of color1; index as i">
+    <h3>{{(i+1) + color}}</h3>
+    <!-- OR -->
+    <!-- <h3>{{i+1}}{{color}}</h3> -->
+</div>
+
+<h2>*ngFor Directive2</h2>
+<div *ngFor="let color of color1; even as e"><!-- first(f),last(l),odd(o),even(e) -->
+    
+    <h3>{{e}} {{color}}</h3>
+</div>
+
+<hr><hr>
+
+<!-- *********************Pipes********************* -->
+<h2>*Pipes In Angular</h2><hr>
+<h2>*String Pipes In Angular</h2>
+<h3>{{key}}</h3>
+<h3>{{key | lowercase}}</h3><!-- LowerCase Pipes -->
+<h3>{{key | uppercase}}</h3><!-- UpperCase Pipes -->
+<h3>{{message | titlecase}}</h3><!-- TitleCase Pipes -->
+<h3>{{key | slice:0:7}}</h3><!-- Slice Pipes -->
+<h3>{{person | json}}</h3><!-- JSON Pipes -->
+
+<hr>
+
+<h2>*Number Pipes In Angular</h2>
+<h3>{{5.678 | number:'1.2-3'}}</h3>
+<h3>{{5.678 | number:'3.4-5'}}</h3>
+<h3>{{5.678 | number:'3.1-2'}}</h3>
+
+<hr>
+
+<h2>*Percent Pipes In Angular</h2>
+<h3>{{0.75 | percent}}</h3>
+<h3>{{7.5 | percent}}</h3>
+
+<hr>
+
+<h2>*Currency Pipes In Angular</h2>
+<h3>{{0.75 | currency}}</h3>
+<h3>{{0.75 | currency:'GBP':'code'}}</h3>
+<h3>{{0.75 | currency:'GBP'}}</h3>
+
+<hr>
+
+<h2>*Date Pipes In Angular</h2>
+<h3>{{date}}</h3>
+<h3>{{date | date:'short'}}</h3>
+<h3>{{date | date:'shortDate'}}</h3>
+<h3>{{date | date:'shortTime'}}</h3>
+<h3>{{date | date:'mediumDate'}}</h3>
+<h3>{{date | date:'mediumTime'}}</h3>
+
+<hr><hr>
+
+<!-- *********************Services********************* -->
+<h2>*Services In Angular</h2>
+<pre><h3> Service means :-A class With A Specific Purpose
+   USE:
+    1) Shara Data.
+    2) Implement Application Logic.
+    3) External Interaction.
+
+    Naming Convention -.Service.ts
+</h3></pre>
+<h3>Employee Details</h3>
+<ul *ngFor="let employee of Employees">
+    <li>{{employee.id}}.{{employee.name0}}&hearts;{{employee.age}}</li>
+</ul>

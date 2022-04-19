@@ -1,0 +1,31 @@
+<h2>Creating Table</h2><hr>
+
+<table>
+    <tr>
+        <th>title</th>
+    </tr>
+    <tr *ngFor="let data of titleArray">
+        <td>{{data}}</td>
+    </tr>
+</table><hr>
+<label> title :- </label>
+<input type="text" placeholder="Enter title" >
+<label> Age :- </label>
+<input type="text" placeholder="Enter Age">
+<label> Contact :- </label>
+<input type="text" placeholder="Enter Contact"><br><br>
+<button type="button" (click)="AddToTable()">Add&hearts;</button><hr>
+
+
+<table>
+    <tr>
+        <th>title</th>
+        <th>Age</th>
+        <th>Contact</th>
+    </tr>
+    <tr *ngFor="let x of friendDetails">
+        <td>{{x.title}}</td>
+        <td>{{x.Age}}</td>
+        <td>{{x.Contact}}</td>
+    </tr>
+</table>

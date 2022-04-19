@@ -1,0 +1,35 @@
+<label>User Name  </label>
+<input type="text" value="" placeholder="Enter UserName" [(ngModel)]="userName" (focus)="blurF()" (input)="inputEvent($any($event).target.value)">
+<label>  PassWord   </label>
+<input type="password" value="" placeholder="Enter PassWord" [(ngModel)]="passWord" (focus)="blurF()"><br>
+<button type="submit" style="margin-top:10px ;" (click)="submitData()">submit</button><hr>
+
+<!-- Taking Input From User -->
+<label> Name:  </label>
+<input type="text" placeholder="Enter Name" [(ngModel)]="stdname">
+<label> Age:  </label>
+<input type="text" placeholder="Enter Age" [(ngModel)]="stdage">
+<label> Contact : </label>
+<input type="text" placeholder="Enter Contact" [(ngModel)]="stdcontact"><br><br>
+<button type="button" (click)="addData()">Add</button>
+<button type="button" style="margin-left: 10px;" (click)="clearField()">Clear Field</button><hr>
+
+
+<!-- Creating Table And Adding Data Into Table -->
+<table>
+    <tr>
+        <th>Sr.No</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Age</th>
+    </tr>
+    <tr *ngFor="let X of Details; index as i">
+        <td>{{i + 1}}</td>
+        <td>{{X.Name}}</td>
+        <td>{{X.Contact}}</td>
+        <td>{{X.Age}}</td>
+        <td><button (click)="deleteData(i)">Delete</button></td>
+    </tr>
+</table>
+
+
