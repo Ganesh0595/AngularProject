@@ -1,11 +1,12 @@
 <!-- *********************Interpolation Binding********************* -->
 <h2>Interpolation Binding</h2>
-<p>My Name Is {{title}}</p><br><hr>
+<h3>My Name Is {{title}}</h3><br><hr>
 
 <!-- *********************Property Binding********************* -->
 <h2>Property Binding</h2>
-<input [id]="myId" type="text" value="Ganesh"><hr>
-<input [disabled]="isDisabled" id="{{myId}}" type="text" value="Ganesh"><hr>
+<h3>{{title}}</h3>
+<input [id]="myId" type="text" value=""><hr>
+<input [disabled]="isDisabled" id="{{myId}}" type="text" value=""><hr>
 
 <!-- *********************Class Binding********************* -->
 <h2>Class Binding</h2>
@@ -86,16 +87,16 @@
 <hr>
 
 <h2>*ngFor Directive1</h2>
-<div *ngFor="let color of color1; index as i">
-    <h3>{{(i+1) + color}}</h3>
+<div  *ngFor="let color of color1; index as i">
+    <h3 id="For">{{(i+1) + color}}</h3>
     <!-- OR -->
     <!-- <h3>{{i+1}}{{color}}</h3> -->
 </div>
 
 <h2>*ngFor Directive2</h2>
-<div *ngFor="let color of color1; even as e"><!-- first(f),last(l),odd(o),even(e) -->
+<div id="For" *ngFor="let color of color1; even as e"><!-- first(f),last(l),odd(o),even(e) -->
     
-    <h3>{{e}} {{color}}</h3>
+    <h3 id="For">{{e}} {{color}}</h3>
 </div>
 
 <hr><hr>
@@ -103,42 +104,43 @@
 <!-- *********************Pipes********************* -->
 <h2>*Pipes In Angular</h2><hr>
 <h2>*String Pipes In Angular</h2>
-<h3>{{key}}</h3>
-<h3>{{key | lowercase}}</h3><!-- LowerCase Pipes -->
-<h3>{{key | uppercase}}</h3><!-- UpperCase Pipes -->
-<h3>{{message | titlecase}}</h3><!-- TitleCase Pipes -->
-<h3>{{key | slice:0:7}}</h3><!-- Slice Pipes -->
-<h3>{{person | json}}</h3><!-- JSON Pipes -->
+<h3 id="str">{{key}}</h3>
+<h3 id="str">{{key | uppercase}}</h3><!-- UpperCase Pipes -->
+<h3 id="str">{{key | lowercase}}</h3><!-- LowerCase Pipes -->
+<h3 id="str">{{message | titlecase}}</h3><!-- TitleCase Pipes -->
+<h3 id="str">{{key | slice:0:7}}</h3><!-- Slice Pipes -->
+<h3 id="str">{{person | json}}</h3><!-- JSON Pipes -->
+
 
 <hr>
 
 <h2>*Number Pipes In Angular</h2>
-<h3>{{5.678 | number:'1.2-3'}}</h3>
-<h3>{{5.678 | number:'3.4-5'}}</h3>
-<h3>{{5.678 | number:'3.1-2'}}</h3>
+<h3 id="num">{{num | number:'1.3-3'}}</h3>
+<h3 id="num">{{num | number:'3.4-5'}}</h3>
+<h3 id="num">{{num | number:'3.1-2'}}</h3>
 
 <hr>
 
 <h2>*Percent Pipes In Angular</h2>
-<h3>{{0.75 | percent}}</h3>
-<h3>{{7.5 | percent}}</h3>
+<h3 id="per">{{0.75 | percent}}</h3>
+<h3 id="per">{{7.5 | percent}}</h3>
 
 <hr>
 
 <h2>*Currency Pipes In Angular</h2>
-<h3>{{0.75 | currency}}</h3>
-<h3>{{0.75 | currency:'GBP':'code'}}</h3>
-<h3>{{0.75 | currency:'GBP'}}</h3>
+<h3 id="currency">{{0.75 | currency}}</h3>
+<h3 id="currency">{{0.75 | currency:'GBP':'code'}}</h3>
+<h3 id="currency">{{0.75 | currency:'GBP'}}</h3>
 
 <hr>
 
 <h2>*Date Pipes In Angular</h2>
-<h3>{{date}}</h3>
-<h3>{{date | date:'short'}}</h3>
-<h3>{{date | date:'shortDate'}}</h3>
-<h3>{{date | date:'shortTime'}}</h3>
-<h3>{{date | date:'mediumDate'}}</h3>
-<h3>{{date | date:'mediumTime'}}</h3>
+<h3 id="date">{{date}}</h3>
+<h3 id="date">{{date | date:'short'}}</h3>
+<h3 id="date">{{date | date:'shortDate'}}</h3>
+<h3 id="date">{{date | date:'shortTime'}}</h3>
+<h3 id="date">{{date | date:'mediumDate'}}</h3>
+<h3 id="date">{{date | date:'mediumTime'}}</h3>
 
 <hr><hr>
 
@@ -154,5 +156,14 @@
 </h3></pre>
 <h3>Employee Details</h3>
 <ul *ngFor="let employee of Employees">
-    <li>{{employee.id}}.{{employee.name0}}&hearts;{{employee.age}}</li>
+    <li>{{employee.id}}.{{employee.name0}} &ShortRightArrow;  {{employee.age}}</li>
 </ul>
+
+<hr>
+
+<h2>Fetching Data using Services</h2>
+<ul *ngFor="let employee of person1">
+    <li>{{employee.id}}.{{employee.name0}} &bigstar;{{employee.age}} &hearts; {{employee.contact}}</li>
+</ul>
+
+<hr><hr>

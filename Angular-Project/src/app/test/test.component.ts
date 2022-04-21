@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CivilService } from '../civil.service';
 
 @Component({
   selector: 'app-test',
@@ -63,7 +64,8 @@ public color ="orange";
 public color1=['red','green','blue','pink','yellow'];
 
 //*********************Pipes*********************
-public key ="Pallavi";
+public key ="Ankush";
+public num = 254654564645;
 public message ="Hello Ganesh";
 public person ={
   "firstName":"Ganesh",
@@ -82,9 +84,13 @@ public Employees =[
   {"id":5, "name0":"Vinod", "age":29}
 ];
 
-  constructor() { }
+person1:any=[];
+  constructor(private _employeeService:CivilService ) { }
 
   ngOnInit(): void {
+    this.person1 = this._employeeService.getEmployees();
+    console.log("this is the data of person "+ this.person1);
+    
   }
 
 }

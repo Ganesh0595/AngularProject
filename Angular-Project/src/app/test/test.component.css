@@ -22,3 +22,39 @@ h4{
 h3{
     margin-left: 50px;
 }
+
+li{
+    font-size: 20px;
+    color:crimson ;
+    font-style: italic;
+}
+
+h3{
+    color: darkmagenta;
+}
+
+#For{
+    color: darkorange;
+}
+
+#str{
+    color: black;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#num{
+    color: midnightblue;
+}
+
+#currency{
+    color: orange;
+    font-size: 25px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#date{
+    font-size: 20px;
+    color: purple;
+}

@@ -1,0 +1,68 @@
+div{
+    padding: 20px;
+    background-color:rgb(157, 235, 209);
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: brown;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  
+  button{
+      width: 100%;
+      font-size: 25px;
+      color: brown;
+      background-color:gray;
+      text-transform:uppercase;
+      font-family:fantasy;
+      opacity: 0.6;
+    }
+    
+    button:hover{
+        /* background-color:hotpink; */
+        cursor: pointer;
+        opacity: 1;
+    }
+    
+    label{
+        font-size: 20px;
+        color:rgb(236, 106, 106);
+    }
+    
+    input[type=radio]{
+        font-size: 25px;
+    }
+    input[name=Gender]{
+        font-size: 25px;
+        color: #4CAF50;
+    
+    }
+        input[type=radio]{
+              width: 20%;
+              background-color: #4CAF50;
+              color: white;
+              padding: 14px 20px;
+              margin: 8px 0;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            
+          }
+    

@@ -1,0 +1,30 @@
+<h2>Fill The Following Details</h2>
+<div>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+<label>Full Name : </label>
+<input type="text" name="fullname" placeholder="Enter Full Name" [(ngModel)]="loginModel.username"  ngModel>
+
+<label>  Email : </label>
+<input type="text" name="email" placeholder="Enter Email"  ngModel>
+
+<label>  Education : </label>
+<input type="text" name="education" placeholder="Enter Education"  ngModel>
+
+<label>  Year Of Passing : </label>
+<input type="text" name="year" placeholder="Enter Passing Year"  ngModel>
+
+<label>  Age : </label>
+<input type="text" name="age" placeholder="Enter Age"  ngModel>
+
+<label>  Contact : </label>
+<input type="text" name="contact" placeholder="Enter Contact"  ngModel><br><br>
+
+<label>Select Gender :-</label>
+<input type="radio" name="Gender" value="male" ngModel>Male&male;
+<input type="radio" name="Gender" value="female" ngModel>FeMale&female;
+
+<br><br>
+
+<button (click)="onSubmit(loginForm)">Submit</button>
+</form>
+</div>

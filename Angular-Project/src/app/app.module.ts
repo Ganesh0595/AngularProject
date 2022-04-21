@@ -8,7 +8,11 @@ import { FormsModule  } from '@angular/forms';
 import { InteractionCComponent } from './interaction-c/interaction-c.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { DynamicTableComponent } from './dynamic-table/dynamic-table.component';
-import { LogInComponent } from './log-in/log-in.component'
+import { LogInComponent } from './log-in/log-in.component';
+import { CivilService } from './civil.service';
+import { NumberPipe } from './number.pipe';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+
 
 @NgModule({
   declarations: [
@@ -17,14 +21,17 @@ import { LogInComponent } from './log-in/log-in.component'
     InteractionCComponent,
     AddStudentComponent,
     DynamicTableComponent,
-    LogInComponent
+    LogInComponent,
+    NumberPipe,
+    TemplateDrivenFormComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CivilService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
