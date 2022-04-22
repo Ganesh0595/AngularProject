@@ -12,7 +12,8 @@ import { LogInComponent } from './log-in/log-in.component';
 import { CivilService } from './civil.service';
 import { NumberPipe } from './number.pipe';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
-
+import { PracticeComponent } from './practice/practice.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,12 +25,14 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     LogInComponent,
     NumberPipe,
     TemplateDrivenFormComponent,
+    PracticeComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [CivilService],
   bootstrap: [AppComponent]
