@@ -19,10 +19,10 @@ email:any;
   }
 
   
-Gender ={
-  "gender1":"Male",
-  "gender2":"Female",
-}
+// Gender ={
+//   "gender1":"Male",
+//   "gender2":"Female",
+// }
 onSubmit(formData:any){
   console.log("Function Called and Passed Data is : " +JSON.stringify(formData.value));
   

@@ -25,7 +25,7 @@ input[type=text], select {
   }
 
   
-  button{
+  input[type=submit]{
       width: 100%;
       font-size: 25px;
       color: brown;
@@ -33,9 +33,10 @@ input[type=text], select {
       text-transform:uppercase;
       font-family:fantasy;
       opacity: 0.6;
+      border-radius: 50px;
     }
     
-    button:hover{
+    input[type=submit]:hover{
         /* background-color:hotpink; */
         cursor: pointer;
         opacity: 1;

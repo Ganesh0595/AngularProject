@@ -2,7 +2,7 @@
 <div>
 <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
 <label>Full Name : </label>
-<input type="text" name="fullname" placeholder="Enter Full Name" [(ngModel)]="loginModel.username"  ngModel>
+<input type="text" name="fullname" placeholder="Enter Full Name"  ngModel>
 
 <label>  Email : </label>
 <input type="text" name="email" placeholder="Enter Email"  ngModel>
@@ -25,6 +25,7 @@
 
 <br><br>
 
-<button (click)="onSubmit(loginForm)">Submit</button>
+<input type="submit" name="ok"> 
+<!-- <button type="ok" >Submit</button> -->
 </form>
 </div>
