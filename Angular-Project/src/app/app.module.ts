@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
-import { FormsModule  } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { InteractionCComponent } from './interaction-c/interaction-c.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { DynamicTableComponent } from './dynamic-table/dynamic-table.component';
@@ -13,7 +13,11 @@ import { CivilService } from './civil.service';
 import { NumberPipe } from './number.pipe';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { PracticeComponent } from './practice/practice.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { LearnvernComponent } from './learnvern/learnvern.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { UserListComponent } from './user-list/user-list.component'
 
 @NgModule({
   declarations: [
@@ -26,13 +30,18 @@ import { HttpClientModule } from '@angular/common/http'
     NumberPipe,
     TemplateDrivenFormComponent,
     PracticeComponent,
+    LearnvernComponent,
+    ReactiveFormComponent,
+    AddUserComponent,
+    UserListComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [CivilService],
   bootstrap: [AppComponent]

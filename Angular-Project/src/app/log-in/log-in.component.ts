@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CivilService } from './../civil.service'
 @Component({
   selector: 'app-log-in',
@@ -7,7 +8,7 @@ import { CivilService } from './../civil.service'
 })
 export class LogInComponent implements OnInit {
   friendDetails:any=[];
-  constructor(private civil:CivilService) { 
+  constructor(private civil:CivilService,private router : Router) { 
 
     this.friendDetails=[
       {
@@ -40,6 +41,8 @@ export class LogInComponent implements OnInit {
   titleArray:any=["Ganesh","Pramod","Nilesh","Ankush","Tushar","Vishal"]
 
   ngOnInit(): void {
+    console.log("Log-In Component Load");
+    
     console.log(this.civil.name);
 
   }
@@ -51,5 +54,9 @@ export class LogInComponent implements OnInit {
         Contact:9922841435
       }
     )
+    }
+
+    gotoReactive(){
+      this.router.navigateByUrl('reactiveForm');
     }
 }

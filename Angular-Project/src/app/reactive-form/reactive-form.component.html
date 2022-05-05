@@ -1,0 +1,29 @@
+<h2>Reactive Forms</h2>
+<div>
+<form [formGroup]="reactiveForm">
+    <label>Name <span style="color: red;">*</span>:</label>
+    <input type="text" placeholder="Enter Name" name="" id="" formControlName="username">
+    
+    <label>Email <span style="color: red;">*</span>:</label>
+    <input type="text" placeholder="Enter Email" name="" id="" formControlName="email">
+    
+    <label>Education <span style="color: red;">*</span>:</label>
+    <input type="text" placeholder="Enter Education" name="" id="" formControlName="education">
+    
+    <label>Year Of Passing <span style="color: red;">*</span>:</label>
+    <input type="text" placeholder="Enter Passing Year" name="" id="" formControlName="year">
+    
+    <label>DOB <span style="color: red;">*</span>:</label>
+    <input type="text" placeholder="Date of Birth (MM/DD/YYYY)" name="" id="" formControlName="dob">
+    
+    <label>Contact <span style="color: red;">*</span>:</label>
+    <input type="text" placeholder="Enter Contact" name="" id="" formControlName="contact">
+    
+    <label>Select Gender <span style="color: red;">*</span>:</label>
+    <input type="radio" value="male" name="Gender" formControlName="Gender">Male&male;
+    <input type="radio" value="female" name="Gender" formControlName="Gender">FeMale&female;
+
+    <button [disabled]="!reactiveForm.valid">Submit</button>
+
+</form>
+</div>

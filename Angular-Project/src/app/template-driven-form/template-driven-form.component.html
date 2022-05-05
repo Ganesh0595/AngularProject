@@ -1,31 +1,37 @@
 <h2>Fill The Following Details</h2>
 <div>
 <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-<label>Full Name : </label>
-<input type="text" name="fullname" placeholder="Enter Full Name"  ngModel>
+<label>Full Name <span style="color: red;">*</span> : </label>
+<input type="text" name="fullname" placeholder="Enter Full Name"  ngModel #fullName="ngModel" required>
+<p style="color: red;" *ngIf="fullName.touched && !fullName.valid">Full Name is required</p>
 
-<label>  Email : </label>
-<input type="text" name="email" placeholder="Enter Email"  ngModel>
+<label>  Email <span style="color: red;">*</span> : </label>
+<input type="text" name="email" placeholder="Enter Email"  ngModel #email="ngModel" required>
+<p style="color: red;" *ngIf="email.touched && !email.valid"> Email is required</p>
 
-<label>  Education : </label>
-<input type="text" name="education" placeholder="Enter Education"  ngModel>
+<label>  Education <span style="color: red;">*</span> : </label>
+<input type="text" name="education" placeholder="Enter Education"  ngModel #education="ngModel" required>
+<p style="color: red;" *ngIf="education.touched && !education.valid">Education is required</p>
 
-<label>  Year Of Passing : </label>
-<input type="text" name="year" placeholder="Enter Passing Year"  ngModel>
+<label>  Year Of Passing <span style="color: red;">*</span> : </label>
+<input type="text" name="year" placeholder="Enter Passing Year"  ngModel #year="ngModel" required>
+<p style="color: red;" *ngIf="year.touched && !year.valid">Passing Year required</p>
 
-<label>  Age : </label>
-<input type="text" name="age" placeholder="Enter Age"  ngModel>
+<label>  Age <span style="color: red;">*</span> : </label>
+<input type="text" name="age" placeholder="Enter Age"  ngModel #age="ngModel" required="">
+<p style="color: red;" *ngIf="age.touched && !age.valid">Age is required</p>
 
-<label>  Contact : </label>
-<input type="text" name="contact" placeholder="Enter Contact"  ngModel><br><br>
+<label>  Contact <span style="color: red;">*</span> : </label>
+<input type="text" name="contact" placeholder="Enter Contact"  ngModel #contact="ngModel">
+<p style="color: red;" *ngIf="contact.touched && !contact.valid">Contact is required</p><br><br>
 
-<label>Select Gender :-</label>
-<input type="radio" name="Gender" value="male" ngModel>Male&male;
-<input type="radio" name="Gender" value="female" ngModel>FeMale&female;
+<label>Select Gender <span style="color: red;">*</span> :-</label>
+<input type="radio" name="Gender" value="male" ngModel #gender="ngModel" required>Male&male;
+<input type="radio" name="Gender" value="female" ngModel required>FeMale&female;
 
 <br><br>
 
-<input type="submit" name="ok"> 
-<!-- <button type="ok" >Submit</button> -->
+<!-- <input type="submit" name="ok">  -->
+<button [disabled]="!loginForm.valid" >Submit</button>
 </form>
 </div>

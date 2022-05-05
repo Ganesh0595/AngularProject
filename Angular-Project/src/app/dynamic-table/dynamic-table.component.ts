@@ -70,6 +70,8 @@ export class DynamicTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("table component load");
+    
   }
 
 }

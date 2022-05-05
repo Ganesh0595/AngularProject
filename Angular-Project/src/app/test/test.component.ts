@@ -10,7 +10,13 @@ export class TestComponent implements OnInit {
 
 
   //*********************Interpolation Binding*********************
-title:any='Ganesh';
+title:any;
+
+OnClick(){
+  this.title="Ganesh";
+console.log(this.title);
+
+}
 
 //*********************Property Binding*********************
 public myId = "testId";
