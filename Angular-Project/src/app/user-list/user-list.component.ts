@@ -41,7 +41,7 @@ export class UserListComponent implements OnInit {
 
   getPaginationDetails(){
     let tableSize = this.userList.length;
-    let recordsPerPage = 10
+    let recordsPerPage = 5
     let numberOfPages = tableSize/recordsPerPage;
     
     console.log('numbers per Page ' +numberOfPages);  

@@ -17,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { LearnvernComponent } from './learnvern/learnvern.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { AddUserComponent } from './add-user/add-user.component';
-import { UserListComponent } from './user-list/user-list.component'
+import { UserListComponent } from './user-list/user-list.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { UserListComponent } from './user-list/user-list.component'
     ReactiveFormComponent,
     AddUserComponent,
     UserListComponent,
+    ParentComponent,
+    ChildComponent,
    
   ],
   imports: [

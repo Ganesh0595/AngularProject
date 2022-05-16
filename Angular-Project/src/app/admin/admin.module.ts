@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { UserAddComponent } from './user-add/user-add.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
   declarations: [
-    UserAddComponent
+    UserAddComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     CommonModule,
@@ -16,4 +20,5 @@ import { UserAddComponent } from './user-add/user-add.component';
 })
 export class AdminModule { }
 console.log('Admin Module Loaded');
+
 

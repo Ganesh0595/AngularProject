@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-add',
@@ -7,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserAddComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
     console.log("User Component Loaded");
     
   }
-
+Onclick(){
+  this.router.navigateByUrl('Reactive');
+}
 }
